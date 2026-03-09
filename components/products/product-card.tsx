@@ -19,7 +19,8 @@ export default function ProductCard({ product }:{
     product: Product }) {
         const hasVoted = false;
          return (
-                <div className="flex flex-row gap-6 overflow-x-auto">
+               <div className="flex items-center 
+                         justify-between mb-8 mx-20">
             {/* //  <Link href={`/products/${product.id}`}> */}
                 <Card className="min-w-[320px] group card-hover hover:bg-primary-foreground/10 border-solid border-gray-400 min-h-[180px]">
                     <CardHeader className="flex-1">
@@ -79,7 +80,7 @@ export default function ProductCard({ product }:{
                         </div>
                     </CardHeader>
                     <CardFooter>
-                        <div className="flex item-start gap-4">
+                        <div className="flex items-start gap-4">
                            {product.tags.map((tag) => (
                               <Button variant="outline" key={tag}>{tag}
                               </Button>
